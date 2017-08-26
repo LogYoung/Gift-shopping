@@ -1,0 +1,123 @@
+.footer_pic{
+    width: 1202px;
+    height: 60px;
+    margin: 0 auto;
+    background: url(../../images/footerpic.png) no-repeat 180px 10px;
+}
+.footer_links{
+      height: 145px;
+      background: #d00e36;
+     .footer_box{
+         width: 1202px;
+         height: 145px;
+         margin: 0 auto;
+         .phone_num{
+             width: 182px;
+             height: 52px;
+             float: left;
+             margin-top:42px; 
+             background: url(../../images/fontnum.png);
+         }
+         .help_center,.after_sales{
+             float: left;
+             list-style: none;
+             margin-left: 60px;
+             font-size: 12px;
+             margin-top:26px;
+             span{
+                 font-size: 14px;
+                 color: white;
+             }
+             li{
+                margin: 5px 0px;
+                 a{
+                    color: white;
+                    text-decoration: none;
+                   
+                }
+             }
+             li:hover a{
+                 text-decoration: underline;
+             }
+         }
+         .weibo,.weixin{
+             float: left;
+         }
+         .weibo{
+             margin-left: 330px;
+             margin-top: 33px;
+            a{
+             float: left;
+             display: block;
+             width: 73px;
+             height: 58px;
+             
+             background: url(../../images/weibo.png) no-repeat;
+            } 
+            .text{
+                float: left;
+                margin-left:10px;
+                font-size: 12px;
+                h5{
+                    color: white;
+                    margin-bottom: 5px;
+                }
+                p{
+                    color: white;
+                }
+            }
+         }
+         .weixin{
+             margin-top:33px;
+             margin-left: 45px;
+             float: left;
+             span{
+                 display: inline-block;
+                 float: left;
+             }
+             .text{
+                 margin-left: 4px;
+                 float: left;
+                 h5{
+                  
+                   color: white;
+                   margin-bottom: 5px;
+                  }
+                  p{
+                    color: white; 
+                    font-size: 12px; 
+                  }
+             }
+         }
+     }
+
+}
+.footer_nav_more{
+    width: 535px;
+    height: 147px;
+    margin: 0 auto;
+    .nav{
+        margin-top: 18px;
+        font-size: 12px;
+        span{
+            color: #d4ccd4;
+        }
+        a{
+            color: #4a4a4a;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0px 5px;
+        }
+    }
+    p{
+      color: #4a4a4a;
+      font-size: 12px; 
+      margin-top: 15px;  
+      text-align: center;   
+    }
+    a{
+        display: block;
+        text-align: center;
+        margin-top: 5px; 
+    }
+}
