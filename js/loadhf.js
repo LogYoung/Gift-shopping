@@ -17,7 +17,6 @@ define(["jquery","cookie"],function($){
 	 			$(date).appendTo("#header")
 	 			
 	 		};
-	 		
 	 		$(".cart_mini").hover(function(){
 	 			$(this).children().eq(1).show()
 	 		},function(){

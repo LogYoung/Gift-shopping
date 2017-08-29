@@ -41,15 +41,33 @@ require(["config"], function(){
 				$("#aginfo").hide().html(" ");
 			}
 		}
-		$("#usn").blur(usblur);
+		
+		function userget(){//用户民是否存在判定
+			$.getJSON("/mock/login.json",function(date){
+	    		
+	    		var iszz=true;
+	    	    var _username=$("#usn").val();
+	    	   	for(var i=0;i<date.length;i++){
+	    	   	   if(_username == date[i].username){
+	    	   	   	   iszz=false;
+	    	   	   	   $("#usrinfo").show().html("用户名已存在")
+	    	   	   }
+	    	   	}
+	    	   	if(iszz){
+	    	   	  $("#usrinfo").hide().html(" ")
+	    	   	  usblur();
+	    	   	}
+	    	   
+	   		})
+		}
+		$("#usn").blur(userget);
 		$("#pasw").blur(paswblur);
 		$("#agpasw").blur(agblur);
-		$.ajax({
+		$.ajax({  //验证码
 			type:"get",
 			url:"http://route.showapi.com/26-4",
 			data:{"showapi_appid":"43701","showapi_sign":"b612189529f54d96b30f817ba67a6d2a","textproducer_char_string":"abcde2345678","image_width":"90","image_height":"50"},
 			success:function(date){
-				console.log(date)
 			    var _date= date["showapi_res_body"],
 			        imgsrc=_date["img_path"],
 					_text=_date["text"];
@@ -91,24 +109,23 @@ require(["config"], function(){
 			}
 		  })
 		})
-	    $("#btn").click(function(e){
-	    		    	
+	    $("#btn").click(function(e){ 	//提交
 	    	e=e||event;
 	    	e.preventDefault();
-	    	usblur();
+	    	userget();
 	    	paswblur();
 			agblur();
 	    	var isII=0;
 	    	var _text=$("#rttext").html();
-	    	var _yzm=$("#yzm").html();
+	    	var _yzm=$("#yzm").val();
 	    	var _usr=$("#usrinfo").css("display");
 	    	var _paw=$("#pasinfo").css("display");
 	    	var _agp=$("#aginfo").css("display");
 	    	var _che=$("#che").prop("checked");
-	    	if(!_text==_yzm){
+	    	if(_text != _yzm){
 	    	 var _html=`<img src="../../images/eorro.png/" style="width:20px;height:20px;position: relative;top:5px">`;
 	    		$("#yzminfo").show().html(_html)
-	    		
+	    		alert("验证码输入错误！")
 	    	}else{
 	    		$("#yzminfo").hide().html(" ")
 	    		isII += 1;
@@ -123,12 +140,12 @@ require(["config"], function(){
 	        	isII += 1;
 	        	
 	        }
-	        console.log(isII)
 	        if(isII==4 && _che){
 	        	var _username=$("#usn").val();
 	        	$.cookie("username",_username,{path:"/"})
 	        	location="/index.html" ;
 	        }
 	    })
+
    })
 })
