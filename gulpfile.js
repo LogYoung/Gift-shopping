@@ -16,7 +16,6 @@ gulp.task("_minijs",function(){
 	     .pipe(gulp.dest("dist/js/"));
 })
 
-
 gulp.task("_sass", function(){
 	gulp.src("sass/*.scss")
 		.pipe(sass({outputStyle: 'compressed'}))

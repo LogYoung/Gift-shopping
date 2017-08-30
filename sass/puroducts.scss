@@ -209,6 +209,9 @@
         font-size: 12px;
         color: #666;
     }
+    a:hover{
+        text-decoration: underline;
+    }
 }
 #main_all{
     .main{
@@ -226,15 +229,63 @@
                 border-top: solid 2px #f0f0f0;
                 background: #fff;
                 .left{
+                    float: left;
                     width: 412px;
                     height: 550px;
                     margin-top: 15px;
                     margin-left: 15px;
+                    position: relative;
+                    .bigzoom{
+                        width: 400px;
+                        height: 400px;
+                        position: absolute;
+                        left: 410px;
+                        top: 0;
+                        border: 1px solid #eee;
+                        overflow: hidden;
+                        display: none;
+                        img{
+                            width: 800px;
+                            height: 800px;
+                            position: absolute;
+                            top:0;
+                            left: 0;
+                            display: none;
+                        }
+                        .imgshow{
+                            display: block;
+                        }
+                    }
                     .zoom{
                         width: 400px;
                         height: 400px;
                         border: 1px solid #E5E5E5;
                         margin-bottom: 10px;
+                        position: relative;
+                        #zoombox{
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            border: 1px solid #eee;
+                            background:#E5E5E5;
+                            opacity: 0.4;
+                            z-index:99;
+                            width: 200px;
+                            height: 200px;
+                            display: none;
+                        }
+                        img{
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            display: none;
+                        }
+                        .imgshow{
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            display: block;
+                        }
                     }
                     .spec{
                         width: 380px;
@@ -252,6 +303,21 @@
                             width: 350px;
                             height: 70px;
                             overflow: hidden;
+                            ul{
+                                li{
+                                    float: left;
+                                    display: inline;
+                                    padding: 0 2px;
+                                    width: 66px;
+                                    height: 66px;
+                                    overflow: hidden;
+                                    border: 1px solid #E5E5E5;
+                                    margin-right: 5px;
+                                }
+                                li:hover{
+                                    border: 2px solid orange;
+                                }
+                            }
                         }
                         .spec_right{
                             margin-top: 12px;
@@ -259,8 +325,327 @@
                             cursor: pointer;
                         }
                     }
+                    .fenx{
+                        margin: 10px auto 20px auto;
+                        width: 345px;
+                        height: 30px;
+                        line-height: 30px;
+                        .fenx_left{
+                            width: 189px;
+                            height: 16px;
+                            float: left;
+                            margin: 6px 10px 0 0;
+                            font-size: 12px;
+                            a{
+                                text-decoration: none;
+                                text-align: left;
+                                overflow: hidden;
+                                height: 16px!important;
+                                line-height: 16px!important;
+                                cursor: pointer;
+                              
+                            }
+                            a{
+                             display: inline-block;
+                             position: relative;
+                             top:4px;
+                             width: 16px;
+                             background: url(../../images/prud/jiathis_ico.png)no-repeat left;
+                            }
+                            .more{
+                                background-position: 0px -1408px;
+                            }
+                            .qzone{
+                                background-position: 0px -64px;
+                            }
+                            .weibo{
+                                background-position: 0px -96px;
+                            }
+                            .tengxun{
+                                background-position: 0px -144px;
+                            }
+                            .weixin{
+                                background-position: 0px -1809px;
+                            }
+                            .renren{
+                               background-position: 0px -160px;
+                            }
+                        }
+                        .fenx_right{
+                            width: 80px;
+                            height: 30px;
+                            float: right;
+                            font-size: 12px;
+                            line-height: 40px;
+                            a{
+                                color: #4a4a4a;
+                                text-decoration: none;
+                                
+                            }
+                            a:hover span{
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    margin-bottom: 30px;
+                    height: 400px;
+                    float: right;
+                    width: 710px;
+                    padding:30px;
+                    .right_top{
+                        height: 80px;
+                        font-size: 20px;
+                        color: #4a4a4a;
+                        line-height: 30px;
+                        max-width: 630px;
+                        font-weight: 600;
+                        border-bottom: 3px solid #f0f0f0;
+                    }
+                    .right_content{
+                        width: 710px;
+                        .pru_text{
+                            min-width: 300px;
+                            float: left;
+                            margin-bottom: 50px;
+                            tr{
+                                height: 40px;
+                                display: table-row;
+                                vertical-align: inherit;
+                                border-color: inherit;
+                                th{
+                                    text-align: right;
+                                    font: 12px/1.5 "Arial", "\5B8B\4F53", sans-serif;
+                                    color: #666;
+                                    text-align: justify;
+                                    width: 64px;
+                                }
+                            }
+                            .pru_price{
+                                    td{
+                                        #pir_new{
+                                            color: #d00e36;
+                                            font-size: 24px;
+                                            font-weight: 700;
+                                            font-family: verdana;
+                                        }
+                                        #pir_old{
+                                            color: #9d9d9d;
+                                            font-size: 12px;
+                                            text-decoration: line-through;
+                                            margin-left: 6px;
+                                            font-weight: normal;
+                                        }
+                                    }
+                            }
+                            .pru_bianhao{
+                                td{
+                                  span{
+                                      font-size: 12px;
+                                  }  
+                                }
+                            }
+                            .pru_num{
+                                td{
+                                    .jian{
+                                        float: left;
+                                        display: block;
+                                        border: solid 1px #999;
+                                        background: #f8f8f8;
+                                        width: 18px;
+                                        height: 18px;
+                                        line-height: 18px;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        color: #666;
+                                        overflow: hidden;
+                                        cursor: pointer;
+                                    }
+                                    #pru_num{
+                                        float: left;
+                                        display: block;
+                                        border: solid 1px #999;
+                                        background: #f8f8f8;
+                                        width: 18px;
+                                        height: 18px;
+                                        line-height: 16px;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        color: #666;
+                                        overflow: hidden;
+                                        width: 30px;
+                                        border-left: none;
+                                        border-right: none;
+                                    }
+                                    .jia{
+                                        float: left;
+                                        display: block;
+                                        border: solid 1px #999;
+                                        background: #f8f8f8;
+                                        width: 18px;
+                                        height: 18px;
+                                        line-height: 18px;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        color: #666;
+                                        overflow: hidden;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .erweima{
+                            width: 115px;
+                            height: 115px;
+                            padding: 10px 0;
+                            margin: 44px 72px 0 0;
+                            border: solid 1px #f0f0f0;
+                            float: right;
+                            text-align: center;
+                            p:nth-child(2){
+                                font-weight: bold;
+                            }
+                            p{
+                                  color: #4a4a4a;
+                                  font-size: 12px;
+                            }
+                        }
+                    }
+                    .bottom_button{
+                        .btn_buy{
+                            margin-left: 20px;
+                            display: block;
+                            float: left;
+                            height: 45px;
+                            width: 210px;
+                            background: url(../../images/prud/products.png) no-repeat -200px 0;
+                        }
+                        .btn_buy:hover{
+                            background-position:-200px -45px;
+                        }
+                        .btn_cart{
+                            margin-left: 20px;
+                            display: block;
+                            float: left;
+                            height: 45px;
+                            width: 210px;
+                            background: url(../../images/prud/products.png) no-repeat -500px 0;
+                        }
+                        .btn_cart:hover{
+                            background-position: -500px -45px;
+                        }
+                    }
                 }
             }
         }
     }
+     .main_info{
+            margin: 0 auto;
+            width: 1200px;
+            min-height: 1235px;
+            margin-top: 20px;
+            border: solid 1px #f0f0f0;
+            .left{
+                float: left;
+                width: 220px;
+                min-height: 1235px;
+                overflow: hidden;
+                border-right: 1px solid #E5E5E5;
+                .left_top{
+                    height: 40px;
+                    border-bottom: solid 1px #f0f0f0;
+                    overflow: hidden;
+                    p{
+                        border-left: solid 3px #d00e36;
+                        margin: 15px 0 15px 11px;
+                        color: #4a4a4a;
+                        padding-left: 10px;
+                        line-height: 14px;
+                        font-size: 12px;
+                    }
+                }
+                .left_bottom{
+                    height: 300px;
+                    padding: 0 10px;
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        li{
+                            margin: 0;
+                            padding: 10px;
+                            border-bottom: solid 1px #f0f0f0;
+                            .img{
+                                display: block;
+                                margin: 0 auto;
+                                width: 100px;
+                            }
+                            .name{
+                                display: block;
+                                margin: 10px 0;
+                                line-height: 20px;
+                                font-size: 12px;
+                                color: #666;
+                                text-decoration: none;
+                            }
+                            .name:hover{
+                                color: red;
+                            }
+                            label{
+                                display: block;
+                                font-weight: bold;
+                                color: #cf0f35;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                float: right;
+                width: 977px;
+                .right_top{
+                    padding: 0 40px;
+                    height: 40px;
+                    border-bottom: solid 1px #f0f0f0;
+                    overflow: hidden;
+                    span{
+                        display: block;
+                        float: left;
+                        height: 38px;
+                        line-height: 38px;
+                        color: #4a4a4a;
+                        margin: 0 45px;
+                        cursor: pointer;
+                        font-size: 13px;
+                    }
+                    .active{
+                        background: #fff;
+                        font-weight: bold;
+                        border-bottom: solid 2px #d00e36;
+                    }
+                }
+                .right_bottom{
+                    div{
+                        margin: 0;
+                        padding: 20px;
+                        display: none;
+                    }
+                    .activebox{
+                        display: block;
+                    }
+                }
+            }
+    }
+}
+#footer{
+    clear: both;
+}
+.main_info{
+    clear: both;
+}
+#header_nav_hide{
+    z-index: 99;
 }

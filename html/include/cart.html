@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/css/cart.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/css/footer.css"/>
+		<script src="../../lib/requirejs/require.js" data-main="../../js/cart"></script>
+	</head>
+	<body>
+		<div id="header">
+			 <div class="header_top">
+				<p class="header_top_wel">
+					<span class="header_top_wel_ind"><a href="/" class="redherf">首页</a>欢迎来到礼物商城！</span>
+					<span class="header_top_wel_login"><a href="/html/include/login.html" class="redherf username"  >请登录</a><a href="/html/include/register.html" class="freezc">免费注册</a></span>
+				</p>
+				<ul class="top_nav">
+					<li><a href="#">个人中心</a></li>
+					<li><a href="#">我的收藏</a></li>
+					<li><a href="#"><i class="iconfont icon-mobile"></i>手机版</a></li>
+					<li><a href="#">客户服务</a></li>
+					<li><a href="#">收藏本站</a></li>
+					<li><a href="#">加入我们</a></li>
+				</ul> 
+			</div>
+		</div>
+		<div id="main">
+				<div class="logo">
+					<h1><a href="../../index.html"><img src="../../images/logo.png"/></a></h1>
+					<div class="process"></div>
+				</div>
+				<table cellpadding="10" cellspacing="0" class="line">
+					<tbody>
+						<tr>
+							<th class="fist_th"></th>
+							<th style="width: 100px;">图片</th>
+							<th>商品名称</th>
+							<th style="width: 10em;">单价</th>
+							<th>数量</th>
+							<th style="width: 10em;">小计</th>
+							<th style="width: 2.5em;">操作</th>
+						</tr>
+					</tbody>
+				</table>
+				<div class="heji">
+					<label >
+						总计(不含运费)：
+						<span>0</span>
+					</label>
+				</div>
+				<div id="btn">
+					 <a href="/" class="checkout">去结算</a>
+				</div>
+				<div class="bottom_btn">
+					<a class="clear">清空购物车</a>
+					<a href="/">继续购物</a>
+				</div>
+		</div>
+		<div id="footer">
+			
+		</div>
+		
+		
+		<!--购物车模板-->
+		<script type="text/html" id="carts">
+			<% for (var i = 0; i < list.length; i++) {
+				var prod = list[i];
+				var allpri=prod.price * prod.num;
+			%>
+			<tr class="cart_main">
+				<td><input type="checkbox" id="check" value="" /></td>
+				<td class="img">
+					<a href="/"><img src="<%= prod.imgSrc %>"/></a>
+				</td>
+				<td><a href="/"><%= prod.text %></a></td>
+				<td class="price"><%= prod.price %></td>
+				<td class="quantity">
+					<a href="javascript:;">-</a>
+					<input type="text" id="num" value="<%= prod.num %>">
+					<a href="javascript:;">+</a>
+				</td>
+				<td class="all_price"><%= allpri %></td>
+				<td class="delete">
+					<a href="/">暂放收藏夹</a>
+					<a href="/" id="shanchu">删除</a>
+				</td>
+			</tr>
+			<% } %>
+	</script> 
+	</body>
+</html>

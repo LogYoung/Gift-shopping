@@ -120,7 +120,7 @@
 							<dl>
 								<dt>
 									<a href="/">居家日用</a>
-								</dt>
+								</dt> 
 								<dd>
 									<a href="/">办公文具</a>
 									<a href="/">置物/收纳</a>
@@ -379,7 +379,7 @@
 			<span>></span>
 			<a href="/">商品列表</a>
 			<span>></span>
-			<label>text</label>
+			<label></label>
 		</div>
 		<div id="main_all">
 			<div class="main">
@@ -387,25 +387,138 @@
 					<div class="top_info">
 						 <div class="left">
 						 	<div class="zoom">
-						 		
+						 		 <div id="zoombox"></div>
 						 	</div>
 						 	<div class="spec">
 						 		<div class="spec_left">
 						 			<img src="../../images/prud/left.gif"/>
 						 		</div>
-						 		<div class="spec_content"></div>
+						 		<div class="spec_content">
+						 			<ul id="smimgSrc">
+
+						 			</ul>
+						 		</div>
 						 		<div class="spec_right">
 						 			<img src="../../images/prud/right.gif"/>
 						 		</div>
 						 	</div>
+						 	<div class="fenx">
+						 		 <div class="fenx_left">
+						 		 	<i class="iconfont icon-fenxiang"></i>
+						 		 	<span class="share">分享到 : </span>
+						 		 	<a href="/" class="more"></a>
+						 		 	<a class="qzone" href="/" title="分享到QQ空间"></a>
+						 		 	<a class="weibo" href="/" title="分享到新浪微博"></a>
+						 		 	<a class="tengxun" href="/" title="分享到腾讯微博"></a>
+						 		 	<a class="weixin" href="/"title="分享到微信"></a>
+						 		 	<a class="renren" href="/"title="分享到人人网"></a>
+						 		 </div>
+						 		 <div class="fenx_right">
+						 		 	 <a href="/"><i class="iconfont icon-shoucang"></i>
+						 		 	 	<span>收藏此商品</span>
+						 		 	 </a>
+						 		 </div>
+						 	</div>
+						 	<div class="bigzoom"></div>
 						 </div>
 						 <div class="right">
-						 	
+						 	 <div class="right_top">
+						 	 	 <span id="pru_name"></span>
+						 	 </div>
+						 	 <div class="right_content">
+						 	 	<table class="pru_text">
+						 	 	  <tr class="pru_price">
+						 	 	  	 <th style="letter-spacing:3px;">礼易价：</th>
+						 	 	  	 <td><span id="pir_new"></span><span id="pir_old"></span></td>
+						 	 	  </tr>
+						 	 	  <tr class="pru_bianhao">
+						 	 	  	 <th>商品编号:</th>
+						 	 	  	 <td><span id="pru_bianhao"></span></td>
+						 	 	  </tr>
+						 	 	  <tr class="pru_num">
+						 	 	  	 <th>购买数量:</th>
+						 	 	  	 <td>
+						 	 	  	 	<span class="jian">-</span>
+						 	 	  	 	<input type="text"  id="pru_num" value="1" />
+						 	 	  	 	<span class="jia">+</span>
+						 	 	  	 </td>
+						 	 	  </tr>
+						 	 	</table>
+						 	 	<div class="erweima">
+						 	 		<img src="../../images/erweima.png"  />
+						 	 		<p>下载手机礼易</p>
+						 	 		<p>手机送礼一步到家</p>
+						 	 	</div>
+						 	 </div>
+						 	 <div class="bottom_button">
+						 	 	<a href="javascript:void(0);" class="btn_buy"></a>
+						 	 	<a href="javascript:void(0);" class="btn_cart"></a>
+						 	 </div>
 						 </div>
+					</div>
+				</div>
+			</div>
+			<div class="main_info">
+				<div class="left">
+					<div class="left_top">
+						<p>送过此商品的人还送了</p>
+					</div>
+					<div class="left_bottom">
+						
+					</div>
+				</div>
+				<div class="right">
+					<div class="right_top">
+						<span  class="xq active">商品详情</span>
+						<span class="zx">商品咨询</span>
+						<span class="bz">购物保障</span>
+						<span  class="wt">常见问题</span>
+					</div>
+					<div class="right_bottom">
+						<div class="spxq activebox" >1</div>
+						<div class="spzx">2</div>
+						<div class="gwbz">3</div>
+						<div class="cjwt">4</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="footer"></div>
+		
+		<!--左侧模板-->
+	<script type="text/html" id="ul_nav">
+	  <ul>
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+		<li>
+			<a class="img" href="/"><img src="<%= prod.imgSrc %>"/></a>
+			<a class="name" href="/"><%= prod.text %></a>
+			<label ><%= prod.price %></label>
+		</li>
+		<% } %>
+	  </ul>
+	</script>
+	<script src="../../lib/jquery/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../lib/jquery_plugins/jquery.fly.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(".btn_cart").on("click", function(e){
+			var _offset = $(".cart_box").offset(),
+				_flyer = $("<img src='../../images/prud/1.jpg'>");
+
+			_flyer.fly({
+				start : {
+					left : e.pageX,
+					top : e.pageY
+				},
+				end : {
+					left : _offset.left,
+					top : _offset.top,
+					width: 0,
+					height : 0
+				}
+			});
+		});
+	</script>
 	</body>
 </html>
