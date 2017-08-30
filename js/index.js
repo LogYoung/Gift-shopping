@@ -126,6 +126,10 @@ require(["config"], function(){
 			 var html = template("activity_notice",{list:date});
 			 $(html).appendTo(".notice_text");
 		})
+		$.getJSON("/mock/quick_links.json",function(date){
+			 var html = template("activity_notice",{list:date});
+			 $(html).appendTo(".quick_link");
+		})
 		$(".notice_activity .header .activity").mouseenter(function(){
 			$(this).addClass("checkde");
 			$(".activity_text").addClass("showtext");
@@ -137,6 +141,223 @@ require(["config"], function(){
 			$(".notice_text").addClass("showtext");
 			$(".activity_text").removeClass("showtext");
 			$(".notice_activity .header .activity").removeClass("checkde")
+		})
+		//热门推荐
+		$.getJSON("/mock/hot_list.json",function(date){
+			 var html = template("hot_list",{list:date});
+			 $(html).appendTo(".hot_list .text");
+		})
+		$.getJSON("/mock/hot_pic.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".hot_main .hot_pic");
+		})
+		//家居生活
+		$.getJSON("/mock/house_nav.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".house_main .header ul");
+		})
+		$.getJSON("/mock/house_left.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".house_main .content .left .pic");
+		})
+		$.getJSON("/mock/house_left_nav1.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".house_main .content .left .left_nav .u1");
+		})
+		$.getJSON("/mock/house_left_nav2.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".house_main .content .left .left_nav .u2");
+		})
+		$.getJSON("/mock/house_left_nav3.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".house_main .content .left .left_nav .u3");
+		})
+		$.getJSON("/mock/house_left_nav4.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".house_main .content .left .left_nav .u4");
+		})
+		$.getJSON("/mock/house_left_nav5.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".house_main .content .left .left_nav .u5");
+		})
+		$.getJSON("/mock/house_top_nav_pic.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".house_main .content .right .top .nav1");
+		})
+		$.getJSON("/mock/house_top_nav_pic2.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".house_main .content .right .top .nav2");
+		})
+		$.getJSON("/mock/house_content_pic_name.json",function(date){
+			 var html = template("div_pic_name_price",{list:date});
+			 $(html).appendTo(".house_main .content .right");
+		})
+		$.getJSON("/mock/house_content_footer.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".house_main .footer_log");
+		})
+		//***************个护化妆
+		$.getJSON("/mock/house_nav.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".cosmetics_main .header ul");
+		})
+		$.getJSON("/mock/cosmetics_left.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .left .pic");
+		})
+		   //左侧导航
+		$.getJSON("/mock/cosmetics_left_nav.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .left_nav");
+		})
+		$.getJSON("/mock/cosmetics_left_nav2.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .left_nav");
+		})
+		$.getJSON("/mock/cosmetics_left_nav3.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .left_nav");
+		})
+		$.getJSON("/mock/cosmetics_left_nav4.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .left_nav");
+		})
+		$.getJSON("/mock/cosmetics_left_nav5.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .left_nav");
+		})
+		    //中间插图
+		$.getJSON("/mock/cosmetics_top_nav1.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .right .top .nav1");
+		})
+		$.getJSON("/mock/cosmetics_top_nav2.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .right .top .nav2");
+		})
+		    //中间商品兰
+		$.getJSON("/mock/cos_pic_name.json",function(date){
+			 var html = template("div_pic_name_price",{list:date});
+			 $(html).appendTo(".cosmetics_main .content .right");
+		})  
+		    //底部log
+		$.getJSON("/mock/cos_footer.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".cosmetics_main .footer_log");
+		})
+		//*******珠宝首饰。手表
+		$.getJSON("/mock/shou.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".jewelry_main .header ul");
+		})
+		$.getJSON("/mock/shou_left.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".jewelry_main .content .left .pic");
+		})
+		   //左侧导航
+		$.getJSON("/mock/shou_left_nav3.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".jewelry_main .content .left_nav");
+		})
+		$.getJSON("/mock/shou_left_nav1.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".jewelry_main .content .left_nav");
+		})
+		$.getJSON("/mock/shou_left_nav2.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".jewelry_main .content .left_nav");
+		})
+		   //商品
+		$.getJSON("/mock/shou_content_pic_name.json",function(date){
+			 var html = template("div_pic_name_price",{list:date});
+			 $(html).appendTo(".jewelry_main .content .right");
+		}) 
+		   //底部log
+		$.getJSON("/mock/shou_footer_log.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".jewelry_main .footer_log");
+		})
+		//***********箱包
+		$.getJSON("/mock/bags.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".bags_main .header ul");
+		})
+		$.getJSON("/mock/bags_left.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".bags_main .content .left .pic");
+		})
+		  //左边导航
+		$.getJSON("/mock/bags_left_nav1.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".bags_main .content .left_nav");
+		})
+		$.getJSON("/mock/bags_left_nav2.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".bags_main .content .left_nav");
+		})
+		$.getJSON("/mock/bags_left_nav3.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".bags_main .content .left_nav");
+		})
+		$.getJSON("/mock/bags_left_nav4.json",function(date){
+			 var html = template("ul_nav",{list:date});
+			 $(html).appendTo(".bags_main .content .left_nav");
+		})
+		  //中间插图
+		$.getJSON("/mock/bags_top_nav.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".bags_main .content .right .top .nav1");
+		})
+		$.getJSON("/mock/bags_top_nav2.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".bags_main .content .right .top .nav2");
+		})
+		  //商品列表
+		$.getJSON("/mock/bags_content_pic.json",function(date){
+			 var html = template("div_pic_name_price",{list:date});
+			 $(html).appendTo(".bags_main .content .right");
+		}) 
+		  //底部log
+		$.getJSON("/mock/bags_footer_pic.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".bags_main .footer_log");
+		})
+		//******食品
+		$.getJSON("/mock/food.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".food_main .header ul");
+		})
+		$.getJSON("/mock/food_left.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".food_main .content .left .pic");
+		})
+		  //左侧导航
+		$.getJSON("/mock/food_left_nav1.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".food_main .content .left .left_nav .u1");
+		})
+		$.getJSON("/mock/food_left_nav2.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".food_main .content .left .left_nav .u2");
+		})
+		$.getJSON("/mock/food_left_nav3.json",function(date){
+			 var html = template("ul_li_a",{list:date});
+			 $(html).appendTo(".food_main .content .left .left_nav .u3");
+		})
+		  //中间插图
+		$.getJSON("/mock/food_top_pic.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".food_main .content .right .top");
+		})
+		  //商品列表
+		$.getJSON("/mock/food_pic_name.json",function(date){
+			 var html = template("div_pic_name_price",{list:date});
+			 $(html).appendTo(".food_main .content .right");
+		}) 
+		  //底部log
+		$.getJSON("/mock/food_footer_log.json",function(date){
+			 var html = template("main_scroll_bottom",{list:date});
+			 $(html).appendTo(".food_main .footer_log");
 		})
 	});
 })

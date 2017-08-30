@@ -3,7 +3,6 @@
     margin: 0;
 }
 #main_all{
-        height: 800px;
         margin-top: 1px;
         #fixed_right{
             position: fixed;
@@ -164,6 +163,7 @@
                     }
                     li:hover a i{
                         color: red;
+                        
                     }
                     .navmo{
                         border: 1px solid white;
@@ -185,6 +185,16 @@
                         z-index:2;
                         position:relative;
                         border-right:none;
+                         a{
+                            i{
+                                float: right;
+                                margin-right: 5px;
+                                background: white;
+                                font-size: 12px;
+                                font-weight: 600;
+                                color:#c2c2c2 ;
+                            }
+                        }
                     }
                 }
             }
@@ -456,9 +466,1196 @@
                             }
                         }
                     }
+                    .quick_link{
+                        height: 40px;
+                        width: 251px;
+                        overflow: hidden;
+                        padding: 0 35px;
+                        a{
+                            display: block;
+                            float: left;
+                            font-size: 12px;
+                            width: 49px;
+                            color: #4a4a4a;
+                            text-decoration: none;
+                            line-height: 20px;
+                            height: 20px;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                    }
                     
                 }
             }
         }
-   
+        #hot_recommend{
+            margin: 0 auto;
+            width: 1214px;
+         
+            padding-top: 10px;
+            margin-top: 30px;
+            background:url(../../images/backgroud.png) no-repeat 0 0;
+            .hot_main{
+                background: #fff;
+                border: solid 1px #e4e4e4;
+                width: 1198px;
+                height: 416px;
+                margin: 0 auto;
+                .hot_header{
+                    background: url(../../images/floor-tr.png) no-repeat 0 0;
+                    height: 50px;
+                    width: 1200px;
+                    overflow: hidden;
+                    border-bottom: solid 1px #e4e4e4;
+                    p{
+                        display: block;
+                        float: left;
+                        margin-left: 20px;
+                        color: #4a4a4a;
+                        height: 50px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        font-family: 'Microsoft Yahei';
+                    }
+                }
+                .hot_list{
+                    width: 1200px;
+                    height: 200px;
+                    .text{
+                        width: 1200px;
+                        height: 200px;
+                        
+                        li{
+                            float: left;
+                            margin-right: 1px;
+                            background: #fff;
+                            display: block;
+                            float: left;
+                            height: 200px;
+                            width: 198px;
+                            overflow: hidden;
+                            text-align: center;
+                            font-size: 12px;
+                            border-right:1px solid #e3e3e3;
+                            border-bottom: 1px solid #e3e3e3;
+                            .name{
+                                margin: 0 auto;
+                                height: 20px;
+                                line-height: 20px;
+                                width: 170px;
+                                overflow: hidden;
+                                a{
+                                    font-size: 12px;
+                                    color: #4a4a4a;
+                                    text-decoration: none;
+                                }
+                                a:hover{
+                                    text-decoration: underline;
+                                    color: red;
+                                }
+                            }
+                            .price{
+                                color: #d00e36;
+                                font-weight: bold;
+                                font-size: 14px;
+                                text-align: center;
+                            }
+                        }
+                        li:nth-child(6){
+                            border-right: none;
+                        }
+                    }
+                }
+                .hot_pic{
+                    width: 1200px;
+                    span{
+                        display:block;
+                        float: left;
+                    }
+                }
+            }
+        }
+        #house{
+            margin: 0 auto;
+            width: 1214px;
+            height: 746px;
+            padding-top: 10px;
+            margin-top: 20px;
+            background: url(../../images/backgroud.png) no-repeat 0 0;
+            .house_main{
+                background: #fff;
+                border: solid 1px #e4e4e4;
+                width: 1200px;
+                height: 736px;
+                margin: 0 auto;
+                .header{
+                    background: url(../../images/floor-tr.png) no-repeat 0 0;
+                    height: 50px;
+                    width: 1200px;
+                    overflow: hidden;
+                    border-bottom: solid 1px #e4e4e4;
+                    p{
+                        display: block;
+                        float: left;
+                        margin-left: 20px;
+                        color: #4a4a4a;
+                        height: 50px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        font-family: 'Microsoft Yahei';
+                        a{
+                            color: #4a4a4a;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                    }
+                    ul{
+                        float: right;
+                        height: 50px;
+                        line-height: 50px;
+                        margin-right: -5px;
+                        li{
+                            float: left;
+                            list-style: none;
+                            a{
+                                display: block;
+                                float: left;
+                                height: 18px;
+                                line-height: 18px;
+                                margin-top: 17px;
+                                padding: 0 21px;
+                                color: #4a4a4a;
+                                text-decoration: none;
+                                font-size: 12px;
+                                border-right: solid 1px #c2c2c2;
+                            }
+                            a:hover{
+                                color: red;
+                            }
+                        }
+                    } 
+                }
+                .content{
+                    width: 1200px;
+                    height: 602px;
+                    border-top: 1px solid #E5E5E5;
+                    .left{
+                        width: 234px;
+                        height: 602px;
+                        background: #fff;
+                        float: left;
+                        border-bottom:1px solid #E5E5E5;
+                        .pic{
+                               position: relative;
+                               height: 271px; 
+                            span{
+
+                               a{
+                                   img{
+                                           position: absolute;
+                                           right: 0;
+                                           top: 0;
+                                   }
+                               }
+                            }
+                            
+                        }
+                        .left_nav{
+                                height: 279px;
+                                margin: 40px 0 10px 10px;
+                                ul{
+                                    height: 41px;
+                                    overflow: hidden;
+                                    margin-bottom: 15px;
+                                    width: 224px;
+                                    li{
+                                        display: inline;
+                                        float: left;
+                                        a{
+                                            width: 74px;
+                                            height: 19px;
+                                            line-height: 20px;
+                                            display: block;
+                                            float: left;
+                                            color: #4a4a4a;
+                                            text-decoration: none;
+                                            font-size: 12px;
+                                            overflow: hidden;
+                                        }
+                                        a:hover{
+                                            color: red;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                    .right{
+                        float: left;
+                        width: 966px;
+                        height: 603px;
+                        overflow: hidden;
+                        
+                        .top{
+                            height: 401px;
+                            margin-bottom: 1px;
+                            width: 776px;
+                            float: right;
+                            .nav1{
+                                float: left;
+                                width: 388px;
+                                height: 401px;
+                                overflow: hidden;
+                                span{
+                                    float: left;
+                                    border-right:1px solid #E4E4E4;
+                                }
+                            }
+                            .nav2{
+                                float: left;
+                                height: 401px;
+                                width: 386px;
+                                overflow: hidden;
+                            }
+                        }
+                        .product:nth-child(2){
+                            border-top: none;
+                            border-bottom: none;
+                        }
+                        .product:nth-child(3){
+                            border-bottom: none;
+                            height: 192px !important;
+                            
+                        }
+                        .product:nth-child(5){
+                            width: 183px;
+                            border-left:none;
+                            border-right: none;
+                        }
+                        .product:nth-child(6){
+                            width: 183px;
+                        }
+                        .product:nth-child(7){
+                            width: 183px;
+                            border-left:none;
+                            border-right: none;
+                        }
+                        .product:nth-child(8){
+                            width: 184px;
+                            border-right: none;
+                        }
+                        .product{
+                            background: #fff;
+                            
+                            width: 178px;
+                            height: 189px;
+                            float: left;
+                            overflow: hidden;
+                            padding: 5px;
+                            border: 1px solid #E5E5E5;
+                            .pic{
+                                display: block;
+                                width: 150px;
+                                height: 150px;
+                                margin: 0 auto;
+                                img{
+                                    width: 150px;
+                                    height: 150px;
+                                }
+                            }
+                            .name{
+                                margin: 0 auto;
+                                height: 20px;
+                                line-height: 20px;
+                                width: 170px;
+                                overflow: hidden;
+                                a{
+                                    font-size: 12px;
+                                    color: #4a4a4a;
+                                    text-decoration: none;
+                                }
+                                a:hover{
+                                    color: red;
+                                    text-decoration: underline;
+                                }
+                            }
+                            .price{
+                                color: #d00e36;
+                                font-weight: bold;
+                                margin-left: 13px;
+                                font-size: 14px;
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+                }
+                .footer_log{
+                    span{
+                        display: inline-block;
+                        float: left;
+                        height: 67px;
+                        margin-top: 13px;
+                        width: 133px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        #cosmetics{
+
+            margin: 0 auto;
+            width: 1214px;
+            height: 746px;
+            padding-top: 10px;
+            margin-top: 20px;
+            background: url(../../images/backgroud.png) no-repeat 0 0;
+            .cosmetics_main{
+                background: #fff;
+                border: solid 1px #e4e4e4;
+                width: 1200px;
+                height: 736px;
+                margin: 0 auto;
+                .header{
+                    background: url(../../images/floor-tr.png) no-repeat 0 0;
+                    height: 50px;
+                    width: 1200px;
+                    overflow: hidden;
+                    border-bottom: solid 1px #e4e4e4;
+                    p{
+                        display: block;
+                        float: left;
+                        margin-left: 20px;
+                        color: #4a4a4a;
+                        height: 50px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        font-family: 'Microsoft Yahei';
+                        a{
+                            color: #4a4a4a;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                    }
+                    ul{
+                        float: right;
+                        height: 50px;
+                        line-height: 50px;
+                        margin-right: -5px;
+                        li{
+                            float: left;
+                            list-style: none;
+                            a{
+                                display: block;
+                                float: left;
+                                height: 18px;
+                                line-height: 18px;
+                                margin-top: 17px;
+                                padding: 0 21px;
+                                color: #4a4a4a;
+                                text-decoration: none;
+                                font-size: 12px;
+                                border-right: solid 1px #c2c2c2;
+                            }
+                            a:hover{
+                                color: red;
+                            }
+                        }
+                    } 
+                }
+                .content{
+                    width: 1200px;
+                    height: 602px;
+                    border-top: 1px solid #E5E5E5;
+                    .left{
+                        width: 234px;
+                        height: 602px;
+                        background: #fff;
+                        float: left;
+                        border-bottom:1px solid #E5E5E5;
+                        .pic{
+                               position: relative;
+                               height: 271px; 
+                            span{
+
+                               a{
+                                   img{
+                                           position: absolute;
+                                           right: 0;
+                                           top: 0;
+                                   }
+                               }
+                            }
+                            
+                        }
+                        .left_nav{
+                                height: 279px;
+                                margin: 40px 0 10px 10px;
+                                ul{
+                                    height: 41px;
+                                    overflow: hidden;
+                                    margin-bottom: 15px;
+                                    width: 224px;
+                                    li{
+                                        display: inline;
+                                        float: left;
+                                        a{
+                                            width: 74px;
+                                            height: 19px;
+                                            line-height: 20px;
+                                            display: block;
+                                            float: left;
+                                            color: #4a4a4a;
+                                            text-decoration: none;
+                                            font-size: 12px;
+                                            overflow: hidden;
+                                        }
+                                        a:hover{
+                                            color: red;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                    .right{
+                        float: left;
+                        width: 966px;
+                        height: 603px;
+                        overflow: hidden;
+                        
+                        .top{
+                            height: 401px;
+                            margin-bottom: 1px;
+                            width: 776px;
+                            float: right;
+                            .nav1{
+                                float: left;
+                                width: 388px;
+                                height: 401px;
+                                overflow: hidden;
+                                span{
+                                    float: left;
+                                    border-right:1px solid #E4E4E4;
+                                }
+                            }
+                            .nav2{
+                                float: left;
+                                height: 401px;
+                                width: 386px;
+                                overflow: hidden;
+                            }
+                        }
+                        .product:nth-child(2){
+                            border-top: none;
+                            border-bottom: none;
+                        }
+                        .product:nth-child(3){
+                            border-bottom: none;
+                            height: 192px !important;
+                            
+                        }
+                        .product:nth-child(5){
+                            width: 183px;
+                            border-left:none;
+                            border-right: none;
+                        }
+                        .product:nth-child(6){
+                            width: 183px;
+                        }
+                        .product:nth-child(7){
+                            width: 183px;
+                            border-left:none;
+                            border-right: none;
+                        }
+                        .product:nth-child(8){
+                            width: 184px;
+                            border-right: none;
+                        }
+                        .product{
+                            background: #fff;
+                            
+                            width: 178px;
+                            height: 189px;
+                            float: left;
+                            overflow: hidden;
+                            padding: 5px;
+                            border: 1px solid #E5E5E5;
+                            .pic{
+                                display: block;
+                                width: 150px;
+                                height: 150px;
+                                margin: 0 auto;
+                                img{
+                                    width: 150px;
+                                    height: 150px;
+                                }
+                            }
+                            .name{
+                                margin: 0 auto;
+                                height: 20px;
+                                line-height: 20px;
+                                width: 170px;
+                                overflow: hidden;
+                                a{
+                                    font-size: 12px;
+                                    color: #4a4a4a;
+                                    text-decoration: none;
+                                }
+                                a:hover{
+                                    color: red;
+                                    text-decoration: underline;
+                                }
+                            }
+                            .price{
+                                color: #d00e36;
+                                font-weight: bold;
+                                margin-left: 13px;
+                                font-size: 14px;
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+                }
+                .footer_log{
+                    span{
+                        display: inline-block;
+                        float: left;
+                        height: 67px;
+                        margin-top: 13px;
+                        width: 133px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        
+        #jewelry{
+            margin: 0 auto;
+            width: 1214px;
+            height: 655px;
+            padding-top: 10px;
+            margin-top: 20px;
+            background: url(../../images/backgroud.png) no-repeat 0 0;
+            margin-bottom: 6px;
+            .jewelry_main{
+                    background: #fff;
+                    border: solid 1px #e4e4e4;
+                    width: 1200px;
+                    height: 645px;
+                    margin: 0 auto;
+                    .header{
+                    background: url(../../images/floor-tr.png) no-repeat 0 0;
+                    height: 50px;
+                    width: 1200px;
+                    overflow: hidden;
+                    border-bottom: solid 1px #e4e4e4;
+                    p{
+                        display: block;
+                        float: left;
+                        margin-left: 20px;
+                        color: #4a4a4a;
+                        height: 50px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        font-family: 'Microsoft Yahei';
+                        a{
+                            color: #4a4a4a;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                    }
+                    ul{
+                        float: right;
+                        height: 50px;
+                        line-height: 50px;
+                        margin-right: -5px;
+                        li{
+                            float: left;
+                            list-style: none;
+                            a{
+                                display: block;
+                                float: left;
+                                height: 18px;
+                                line-height: 18px;
+                                margin-top: 17px;
+                                padding: 0 21px;
+                                color: #4a4a4a;
+                                text-decoration: none;
+                                font-size: 12px;
+                                border-right: solid 1px #c2c2c2;
+                            }
+                            a:hover{
+                                color: red;
+                            }
+                        }
+                    } 
+                }
+                .content{
+                    height: 509px;
+                    width: 1200px;
+                    overflow: hidden;
+                    margin-bottom: 2px;
+                    padding-top: 1px;
+                    border-top: 1px solid #E5E5E5;
+                    .left{
+                        width: 234px;
+                        background: #fff;
+                        float: left;
+                        height: 507px;
+                        border-bottom: 1px solid #E5E5E5;
+                        .pic{
+                            position: relative;
+                            height: 271px;
+                        }
+                        .left_nav{
+                            height: 216px;
+                            width: 224px;
+                            margin: 10px 0 10px 10px;
+                            overflow: hidden;
+                            ul{
+                                height: 41px;
+                                overflow: hidden;
+                                margin-bottom: 15px;
+                                li{
+                                    list-style: none;
+                                    float: left;
+                                    a{
+                                        width: 74px;
+                                        height: 19px;
+                                        line-height: 20px;
+                                        display: block;
+                                        float: left;
+                                        color: #4a4a4a;
+                                        text-decoration: none;
+                                        font-size: 12px;
+                                        overflow: hidden;
+                                    }
+                                    a:hover{
+                                        color: red;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right{
+                        width: 963px;
+                        height: 508px;
+                        float: left;
+                        .product:nth-child(1){
+                            border-top: none;
+                            border-right: none;
+                            border-bottom: none;
+                        }
+                        .product:nth-child(2){
+                            border-top: none;
+                            border-right: none;
+                            border-bottom: none;
+                        }
+                        .product:nth-child(3){
+                            border-top: none;
+                            border-right: none;
+                            border-bottom: none;
+                        }
+                        .product:nth-child(4){
+                            border-top: none;
+                            border-bottom: none;
+                            border-right: none;
+                            width: 232px;
+                        }
+                        .product:nth-child(5){
+                            border-right: none;
+                            
+                        }
+                        .product:nth-child(6){
+                            border-right: none;
+                            
+                        }
+                        .product:nth-child(7){
+                            border-right: none;
+                            
+                        }
+                        .product:nth-child(8){
+                            border-right: none;
+                            width: 232px;
+                            
+                        }
+                        
+                        .product{
+                            width: 229px;
+                            height: 233px;
+                            overflow: hidden;
+                            float: left;
+                            background: #fff;
+                            padding: 15px 5px 5px 5px;
+                            border: 1px solid #E5E5E5;
+                            .pic{
+                                width: 150px;
+                                height: 150px;
+                                display: block;
+                                margin: 0 auto 10px auto;
+                                overflow: hidden;
+                            }
+                            .name{
+                                margin: 0 auto;
+                                height: 20px;
+                                line-height: 20px;
+                                width: 215px;
+                                overflow: hidden;
+                                a{
+                                    font-size: 12px;
+                                    color: #4a4a4a;
+                                    text-decoration: none;
+                                }
+                                a:hover{
+                                    text-decoration: underline;
+                                    color: red;
+                                }
+                            }
+                            .price{
+                                color: #d00e36;
+                                font-weight: bold;
+                                margin-left: 13px;
+                            }
+                        }
+                    }
+                }
+                .footer_log{
+                        height: 80px;
+                        width: 1196px;
+                        padding: 0 1px;
+                        background: #fff;
+                        overflow: hidden;
+                        span{
+                        display: inline-block;
+                        float: left;
+                        height: 67px;
+                        margin-top: 13px;
+                        width: 133px;
+                        overflow: hidden;
+                        }
+                }
+            }
+        }
+        .inset{
+            height: 90px;
+            width: 1196px;
+            padding: 0 1px;
+            margin: 0 auto;
+            background: #fff;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        #bags{
+            margin: 0 auto;
+            width: 1214px;
+            height: 746px;
+            margin-top: 20px;
+            background: url(../../images/backgroud.png) no-repeat 0 0;
+            .bags_main{
+                background: #fff;
+                border: solid 1px #e4e4e4;
+                width: 1200px;
+                height: 736px;
+                margin: 0 auto;
+                .header{
+                    background: url(../../images/floor-tr.png) no-repeat 0 0;
+                    height: 50px;
+                    width: 1200px;
+                    overflow: hidden;
+                    border-bottom: solid 1px #e4e4e4;
+                    p{
+                        display: block;
+                        float: left;
+                        margin-left: 20px;
+                        color: #4a4a4a;
+                        height: 50px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        font-family: 'Microsoft Yahei';
+                        a{
+                            color: #4a4a4a;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                    }
+                    ul{
+                        float: right;
+                        height: 50px;
+                        line-height: 50px;
+                        margin-right: -5px;
+                        li{
+                            float: left;
+                            list-style: none;
+                            a{
+                                display: block;
+                                float: left;
+                                height: 18px;
+                                line-height: 18px;
+                                margin-top: 17px;
+                                padding: 0 21px;
+                                color: #4a4a4a;
+                                text-decoration: none;
+                                font-size: 12px;
+                                border-right: solid 1px #c2c2c2;
+                            }
+                            a:hover{
+                                color: red;
+                            }
+                        }
+                    } 
+                }
+                .content{
+                    width: 1200px;
+                    height: 602px;
+                    border-top: 1px solid #E5E5E5;
+                    .left{
+                        width: 234px;
+                        height: 602px;
+                        background: #fff;
+                        float: left;
+                        border-bottom:1px solid #E5E5E5;
+                        .pic{
+                               position: relative;
+                               height: 271px; 
+                            span{
+
+                               a{
+                                   img{
+                                           position: absolute;
+                                           right: 0;
+                                           top: 0;
+                                   }
+                               }
+                            }
+                            
+                        }
+                        .left_nav{
+                                height: 279px;
+                                margin: 40px 0 10px 10px;
+                                ul{
+                                    height: 41px;
+                                    overflow: hidden;
+                                    margin-bottom: 15px;
+                                    width: 224px;
+                                    li{
+                                        display: inline;
+                                        float: left;
+                                        a{
+                                            width: 74px;
+                                            height: 19px;
+                                            line-height: 20px;
+                                            display: block;
+                                            float: left;
+                                            color: #4a4a4a;
+                                            text-decoration: none;
+                                            font-size: 12px;
+                                            overflow: hidden;
+                                        }
+                                        a:hover{
+                                            color: red;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                    .right{
+                        float: left;
+                        width: 966px;
+                        height: 603px;
+                        overflow: hidden;
+                        
+                        .top{
+                            height: 401px;
+                            margin-bottom: 1px;
+                            width: 776px;
+                            float: right;
+                            .nav1{
+                                float: left;
+                                width: 388px;
+                                height: 401px;
+                                overflow: hidden;
+                                span{
+                                    float: left;
+                                    border-right:1px solid #E4E4E4;
+                                }
+                            }
+                            .nav2{
+                                float: left;
+                                height: 401px;
+                                width: 386px;
+                                overflow: hidden;
+                            }
+                        }
+                        .product:nth-child(2){
+                            border-top: none;
+                            border-bottom: none;
+                        }
+                        .product:nth-child(3){
+                            border-bottom: none;
+                            height: 192px !important;
+                            
+                        }
+                        .product:nth-child(5){
+                            width: 183px;
+                            border-left:none;
+                            border-right: none;
+                        }
+                        .product:nth-child(6){
+                            width: 183px;
+                        }
+                        .product:nth-child(7){
+                            width: 183px;
+                            border-left:none;
+                            border-right: none;
+                        }
+                        .product:nth-child(8){
+                            width: 184px;
+                            border-right: none;
+                        }
+                        .product{
+                            background: #fff;
+                            width: 178px;
+                            height: 189px;
+                            float: left;
+                            overflow: hidden;
+                            padding: 5px;
+                            border: 1px solid #E5E5E5;
+                            .pic{
+                                display: block;
+                                width: 150px;
+                                height: 150px;
+                                margin: 0 auto;
+                                img{
+                                    width: 150px;
+                                    height: 150px;
+                                }
+                            }
+                            .name{
+                                margin: 0 auto;
+                                height: 20px;
+                                line-height: 20px;
+                                width: 170px;
+                                overflow: hidden;
+                                a{
+                                    font-size: 12px;
+                                    color: #4a4a4a;
+                                    text-decoration: none;
+                                }
+                                a:hover{
+                                    color: red;
+                                    text-decoration: underline;
+                                }
+                            }
+                            .price{
+                                color: #d00e36;
+                                font-weight: bold;
+                                margin-left: 13px;
+                                font-size: 14px;
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+                }
+                .footer_log{
+                    span{
+                        display: inline-block;
+                        float: left;
+                        height: 67px;
+                        margin-top: 13px;
+                        width: 133px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        #food{
+            margin: 0 auto;
+            width: 1214px;
+            height: 590px;
+            margin-top: 20px;
+            background: url(../../images/backgroud.png) no-repeat 0 0; 
+            .food_main{
+                background: #fff;
+                border: solid 1px #e4e4e4;
+                width: 1200px;
+                height: 580px;
+                margin: 0 auto;
+                .header{
+                    background: url(../../images/floor-tr.png) no-repeat 0 0;
+                    height: 50px;
+                    width: 1200px;
+                    overflow: hidden;
+                    border-bottom: solid 1px #e4e4e4;
+                    p{
+                        display: block;
+                        float: left;
+                        margin-left: 20px;
+                        color: #4a4a4a;
+                        height: 50px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                        font-family: 'Microsoft Yahei';
+                        a{
+                            color: #4a4a4a;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                    }
+                    ul{
+                        float: right;
+                        height: 50px;
+                        line-height: 50px;
+                        margin-right: -5px;
+                        li{
+                            float: left;
+                            list-style: none;
+                            a{
+                                display: block;
+                                float: left;
+                                height: 18px;
+                                line-height: 18px;
+                                margin-top: 17px;
+                                padding: 0 21px;
+                                color: #4a4a4a;
+                                text-decoration: none;
+                                font-size: 12px;
+                                border-right: solid 1px #c2c2c2;
+                            }
+                            a:hover{
+                                color: red;
+                            }
+                        }
+                    } 
+                }
+                .content{
+                    width: 1200px;
+                    height: 447px;
+                    background: #e4e4e4;
+                    .left{
+                        width: 234px;
+                        background: #fff;
+                        float: left;
+                        height: 445px;
+                        .pic{
+                            position: relative;
+                            height: 271px;
+                        }
+                        .left_nav{
+                            width: 224px;
+                            height: 154px;
+                            margin: 10px 0 10px 10px;
+                            overflow: hidden;
+                            ul{
+                                height: 41px;
+                                overflow: hidden;
+                                margin-bottom: 15px;
+                                li{
+                                    float: left;
+                                    list-style: none;
+                                    a{
+                                        width: 74px;
+                                        height: 19px;
+                                        line-height: 20px;
+                                        display: block;
+                                        float: left;
+                                        color: #4a4a4a;
+                                        text-decoration: none;
+                                        font-size: 12px;
+                                        overflow: hidden;
+                                    }
+                                    a:hover{
+                                        color: red;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                    .right{
+                        width: 963px;
+                        float: right;
+                        height: 446px;
+                        overflow: hidden;
+                        .top{
+                            float: right;
+                            width: 488px;
+                            background: #fff;
+                            height: 222px;
+                            margin-bottom: 1px;
+                        }
+                        .product{
+                                padding-top: 15px;
+                                width: 236px;
+                                height: 207px;
+                                overflow: hidden;
+                                float: left;
+                                background: #fff;
+                                margin: 0 1px 1px 0;
+                                .pic{
+                                    width: 150px;
+                                    height: 150px;
+                                    margin: 0 auto;
+                                    display: block;
+                                }
+                                .name{
+                                    margin: 0 auto;
+                                    height: 20px;
+                                    line-height: 20px;
+                                    width: 215px;
+                                    overflow: hidden;
+                                    a{
+                                        font-size: 12px;
+                                        color: #4a4a4a;
+                                        text-decoration: none;
+                                    }
+                                    a:hover{
+                                        text-decoration: underline;
+                                        color: red;
+                                    }
+                                }
+                                .price{
+                                    color: #d00e36;
+                                    font-weight: bold;
+                                    margin-left: 13px;
+                                }
+                        }
+                    }
+                }
+                .footer_log{
+                    span{
+                        display: inline-block;
+                        float: left;
+                        height: 67px;
+                        margin-top: 13px;
+                        width: 133px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
 }

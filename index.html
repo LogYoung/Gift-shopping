@@ -425,7 +425,161 @@
 						<a class="a5" href="/"><span></span>手机送礼</a>
 						<a class="a6" href="/"><span></span>特别定制</a>
 					</div>
+					<div class="quick_link"></div>
 				</div>
+			</div>
+		</div>
+		<div id="hot_recommend">
+			<div class="hot_main">
+				<div class="hot_header">
+					<p>热门推荐</p>
+				</div>
+				<div class="hot_list">
+					<ul class="text"></ul>
+				</div>
+				<div class="hot_pic">
+					
+				</div> 
+			</div>
+		</div>
+		<div id="house">
+			 <div class="house_main">
+			 	 <div class="header">
+			 	 	<p><a href="">家居生活</a></p>
+			 	 	<ul class="header_nav">
+			 	 	</ul>
+			 	 </div>
+			 	 <div class="content">
+			 	 	<div class="left">
+			 	 		<div class="pic">
+			 	 		</div>
+			 	 		<div class="left_nav">
+			 	 			<ul class="u1"></ul>
+			 	 			<ul class="u2"></ul>
+			 	 			<ul class="u3"></ul>
+			 	 			<ul class="u4"></ul>
+			 	 			<ul class="u5"></ul> 
+			 	 		</div>
+			 	 	</div>
+			 	 	<div class="right">
+			 	 		 
+			 	 		<div class="top">
+			 	 			<div class="nav1">
+			 	 				
+			 	 			</div>
+			 	 			<div class="nav2"></div>
+			 	 		</div>
+			 	 		
+			 	 	</div>
+			 	 </div>
+			 	 <div class="footer_log">
+			 	 	 
+			 	 </div>
+			 </div>
+		</div>
+		<!--化妆品-->
+		<div id="cosmetics">
+			<div class="cosmetics_main">
+				<div class="header">
+					<p><a href="">个护化妆</a></p>
+					<ul class="header_nav"></ul>
+				</div>
+				<div class="content">
+					<div class="left">
+			 	 		<div class="pic">
+			 	 		</div>
+			 	 		<div class="left_nav">
+			 	 		</div>
+			 	 	</div>
+			 	 	<div class="right">
+			 	 		 
+			 	 		<div class="top">
+			 	 			<div class="nav1">
+			 	 				
+			 	 			</div>
+			 	 			<div class="nav2"></div>
+			 	 		</div>
+			 	 	</div> 
+				</div>
+				<div class="footer_log">
+					
+				</div>
+			</div>
+		</div>
+		<!--珠宝首饰-->
+		<div id="jewelry">
+			<div class="jewelry_main">
+				<div class="header">
+					<p><a href="/">珠宝首饰、手表</a></p>
+					<ul class="header_nav"></ul>
+				</div>
+				<div class="content">
+					<div class="left">
+						<div class="pic">
+			 	 		</div>
+			 	 		<div class="left_nav">
+			 	 		</div>
+					</div>
+					<div class="right"></div>
+				</div>
+				<div class="footer_log">
+				</div>
+			</div>
+		</div>
+		<div class="inset">
+			<a href="/"><img src="images/chatu.jpg"/></a>
+		</div>
+		<!--箱包-->
+		<div id="bags">
+			<div class="bags_main">
+				<div class="header">
+					<p><a href="/">箱包配饰</a></p>
+					<ul class="header_nav"></ul>
+				</div>
+				<div class="content">
+					<div class="left">
+						<div class="pic">
+			 	 		</div>
+			 	 		<div class="left_nav">
+			 	 		</div>
+					</div>
+					<div class="right">
+			 	 		<div class="top">
+			 	 			<div class="nav1">
+			 	 			</div>
+			 	 			<div class="nav2"></div>
+			 	 		</div> 
+					</div>
+				</div>
+				<div class="footer_log">
+				</div>
+			</div>
+		</div>
+		<div id="food">
+			<div class="food_main">
+				<div class="header">
+					<p><a href="/">食品保健</a></p>
+					<ul class="header_nav"></ul>
+				</div>
+				<div class="content">
+					<div class="left">
+						<div class="pic">
+			 	 		</div>
+			 	 		<div class="left_nav">
+			 	 			<ul class="u1"></ul>
+			 	 			<ul class="u2"></ul>
+			 	 			<ul class="u3"></ul>
+			 	 		</div>
+					</div>
+					<div class="right">
+			 	 		<div class="top">
+			 	 			<div class="nav1">
+			 	 			</div> 
+			 	 		</div> 
+					</div>
+				</div>
+				<div class="footer_log">
+				</div> 
 			</div>
 		</div>
 	</div>
@@ -452,6 +606,60 @@
 		</span>
 		<% } %>
 	</script>
+	<!--热门推荐板块list-->
+	<script type="text/html" id="hot_list">
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+		<li>
+			<a href="/" title="<%= prod.title %>">
+				<img src="<%= prod.imgSrc %>"/>
+			</a>
+			<div class="name">
+				<a href="/" title="<%= prod.title %>"><%= prod.name %></a>
+			</div>
+			<span class="price"><%= prod.price %></span>
+		</li>
+		<% } %>
+	</script>
+	<!--家居生活导航-->
+	<script type="text/html" id="ul_li_a">
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+		<li>
+			<a href="/"><%= prod.text %></a>
+		</li>
+		<% } %>
+	</script>
+	<!--div嵌套商品蓝-->
+	<script type="text/html" id="div_pic_name_price">
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+		<div class="product">
+			<a class="pic"  href="/" title="<%= prod.title %>">
+				<img src="<%= prod.imgSrc %>"/>
+			</a>
+			<div class="name">
+				<a href="/" title="<%= prod.title %>"><%= prod.name %></a>
+			</div>
+			<span class="price"><%= prod.price %></span>
+		</div>
+		<% } %>
+	</script>
+	<!--多层ul嵌套-->
+	<script type="text/html" id="ul_nav">
+	  <ul>
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+		<li>
+			<a href="/"><%= prod.text %></a>
+		</li>
+		<% } %>
+	  </ul>
+	</script> 
 </body>
     
 </html>
