@@ -377,7 +377,7 @@
 		<div class="nav_path">
 			<a href="/index.html">首页</a>
 			<span>></span>
-			<a href="/">商品列表</a>
+			<a href="list.html">商品列表</a>
 			<span>></span>
 			<label></label>
 		</div>
@@ -503,22 +503,45 @@
 	<script src="../../lib/jquery_plugins/jquery.fly.min.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		$(".btn_cart").on("click", function(e){
+			 var _username=$.cookie("username");
+		 		    if(!_username){
+		 		     	
+		 		    	return
+		 		    }
+			
 			var _offset = $(".cart_box").offset(),
 				_flyer = $("<img src='../../images/prud/1.jpg'>");
-
+			var _scol=$("body").scrollTop();
+			
 			_flyer.fly({
 				start : {
 					left : e.pageX,
-					top : e.pageY
+					top : e.pageY-_scol
 				},
 				end : {
 					left : _offset.left,
-					top : _offset.top,
+					top : _offset.top-_scol,
 					width: 0,
 					height : 0
 				}
 			});
 		});
+	</script>
+	<!--购物车小窗口-->
+	<script type="text/html" id="mini_carts">
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+			<div class="products">
+				<a href="/" class="img"><img src="<%= prod.imgSrc %>"/></a>
+				<div class="items">
+					<a href="/" class="name"><%= prod.text %></a>
+					<div class="price"><%= prod.price %></div>
+					<div class="quantiy">数量：<%= prod.num %></div>
+				</div>
+			</div>
+			<div class="clear_both" style="clear: both;height: 0;"></div>
+		<% } %>
 	</script>
 	</body>
 </html>

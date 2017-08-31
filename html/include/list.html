@@ -436,6 +436,7 @@
 				<div class="text">
 					<a href="/" class="name"><%= prod.text %></a>
 					<label><%= prod.price %></label>
+					<span id="idbox" style="display: none;"><%= prod.id %></span>
 					<div class="btn">
 						<a class="buy" href="/">直接购买</a>
 						<a  class="cart">加入购物车</a>
@@ -444,6 +445,22 @@
 				</div>
 			</div>
 		</li>
+		<% } %>
+	</script>
+	<!--购物车小窗口-->
+	<script type="text/html" id="mini_carts">
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+			<div class="products">
+				<a href="/" class="img"><img src="<%= prod.imgSrc %>"/></a>
+				<div class="items">
+					<a href="/" class="name"><%= prod.text %></a>
+					<div class="price"><%= prod.price %></div>
+					<div class="quantiy">数量：<%= prod.num %></div>
+				</div>
+			</div>
+			<div class="clear_both" style="clear: both;height: 0;"></div>
 		<% } %>
 	</script>
 	</body>

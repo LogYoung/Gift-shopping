@@ -102,7 +102,10 @@ body{
         tbody{
             tr{
                 .fist_th{
-                    width: 23px;
+                    #allche{
+                        position: relative;
+                        top: 2px;
+                    }
                 }
                 th{
                     height: 20px;
@@ -229,5 +232,21 @@ body{
             a:hover{
                 color: red;
             }
+    }
+}
+.kongcart{
+    padding: 70px 10px;
+    height: 40px;
+    line-height: 30px;
+    border: solid 1px #eee;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    a{
+        padding: 0 5px;
+        font-size: 18px;
+        color: #f60;
+        text-decoration: none;
+        font-family: 'Microsoft Yahei';
     }
 }

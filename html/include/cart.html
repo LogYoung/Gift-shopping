@@ -33,7 +33,9 @@
 				<table cellpadding="10" cellspacing="0" class="line">
 					<tbody>
 						<tr>
-							<th class="fist_th"></th>
+							<th class="fist_th">
+								<input type="checkbox"  id="allche"/>全选
+							</th>
 							<th style="width: 100px;">图片</th>
 							<th>商品名称</th>
 							<th style="width: 10em;">单价</th>
@@ -66,24 +68,26 @@
 		<script type="text/html" id="carts">
 			<% for (var i = 0; i < list.length; i++) {
 				var prod = list[i];
-				var allpri=prod.price * prod.num;
+				var allpri=prod.price.slice(1) * prod.num;
 			%>
 			<tr class="cart_main">
-				<td><input type="checkbox" id="check" value="" /></td>
+				<td><input type="checkbox" class="check" value="" />
+					<span id="id" style="display: none"><%= prod.id %></span>
+				</td>
 				<td class="img">
 					<a href="/"><img src="<%= prod.imgSrc %>"/></a>
 				</td>
 				<td><a href="/"><%= prod.text %></a></td>
 				<td class="price"><%= prod.price %></td>
 				<td class="quantity">
-					<a href="javascript:;">-</a>
+					<a href="javascript:;" class="jian">-</a>
 					<input type="text" id="num" value="<%= prod.num %>">
-					<a href="javascript:;">+</a>
+					<a href="javascript:;" class="jia">+</a>
 				</td>
 				<td class="all_price"><%= allpri %></td>
 				<td class="delete">
-					<a href="/">暂放收藏夹</a>
-					<a href="/" id="shanchu">删除</a>
+					<a href="javascript:;">暂放收藏夹</a>
+					<a href="javascript:;" class="shanchu">删除</a>
 				</td>
 			</tr>
 			<% } %>

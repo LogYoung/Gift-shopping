@@ -612,7 +612,7 @@
 			var prod = list[i];
 		%>
 		<li>
-			<a href="/" title="<%= prod.title %>">
+			<a href="/html/include/products.html" target="_blank" title="<%= prod.title %>">
 				<img src="<%= prod.imgSrc %>"/>
 			</a>
 			<div class="name">
@@ -660,6 +660,22 @@
 		<% } %>
 	  </ul>
 	</script> 
+	<!--购物车小窗口-->
+	<script type="text/html" id="mini_carts">
+		<% for (var i = 0; i < list.length; i++) {
+			var prod = list[i];
+		%>
+			<div class="products">
+				<a href="/" class="img"><img src="<%= prod.imgSrc %>"/></a>
+				<div class="items">
+					<a href="/" class="name"><%= prod.text %></a>
+					<div class="price"><%= prod.price %></div>
+					<div class="quantiy">数量：<%= prod.num %></div>
+				</div>
+			</div>
+			<div class="clear_both" style="clear: both;height: 0;"></div>
+		<% } %>
+	</script>
 </body>
     
 </html>

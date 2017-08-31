@@ -359,5 +359,7 @@ require(["config"], function(){
 			 var html = template("main_scroll_bottom",{list:date});
 			 $(html).appendTo(".food_main .footer_log");
 		})
+		
+		
 	});
 })

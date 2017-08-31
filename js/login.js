@@ -13,7 +13,7 @@ require(["config"], function(){
 			      date[i].password == _password){
 			      	isII=true;
 			   	   $.cookie("username",_username,{path:"/"})
-			   	   location="/index.html"   
+			   	   window.history.back(); 
 			   	  var rdm=$("#rdmima").prop("checked")
 	  		   	  if(rdm){
 	  		   	  
